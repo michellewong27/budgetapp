@@ -25,8 +25,21 @@ function eventListeners(){
     //new instance of UI class
     const ui = new UI()
 
-    
+    budgetForm.addEventListener('submit', function(event){
+        event.preventDefault();
+    })
+
+    expenseForm.addEventListener('submit', function(event){
+        
+    })
+
+    expenseList.addEventListener('click', function(){
+
+    })
+
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', function(){
