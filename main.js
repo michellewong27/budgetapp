@@ -20,10 +20,18 @@ class UI {
         //get value from budget input
         const value = this.budgetInput.value;
         if(value === '' || value < 0){
+            //add class list to show message
             this.budgetFeedback.classList.add('showItem');
             this.budgetFeedback.innerHTML = `
             <p>Value cannot be empty or negative</p>
-            `
+            `;
+            //grabbing value of this thats pointing back to the class
+            const self = this;
+            //hide message after set time i.e. 40000 seconds
+            setTimeout(function(){
+                //remove clas list to hide message
+                self.budgetFeedback.classList.remove('showItem');
+            }, 4000);
         }
     }
 }
