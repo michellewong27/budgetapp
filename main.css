@@ -1,0 +1,9 @@
+.budget-feedback,
+.expense-feedback {
+    display: none;
+}
+
+/* added & shows budget feedback when input is entered */
+.showItem {
+    display: block;
+}

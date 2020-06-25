@@ -15,6 +15,17 @@ class UI {
         this.itemList = [];
         this.itemID = 0;
     }
+    //submit budget method
+    submitBudgetForm(){
+        //get value from budget input
+        const value = this.budgetInput.value;
+        if(value === '' || value < 0){
+            this.budgetFeedback.classList.add('showItem');
+            this.budgetFeedback.innerHTML = `
+            <p>Value cannot be empty or negative</p>
+            `
+        }
+    }
 }
 
 function eventListeners(){
@@ -27,10 +38,11 @@ function eventListeners(){
 
     budgetForm.addEventListener('submit', function(event){
         event.preventDefault();
+        ui.submitBudgetForm();
     })
 
     expenseForm.addEventListener('submit', function(event){
-        
+        event.preventDefault();
     })
 
     expenseList.addEventListener('click', function(){
