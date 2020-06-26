@@ -36,17 +36,17 @@
         </div>
 
         <div>
-            <div class="expense-feedback">Expense Feedback</div>
+            <div class="expense-feedback alert alert-danger text-capitalize">Expense Feedback</div>
             <form id="expense-form" class="expense-form">
-                <h2>Please enter your expense</h2>
+                <h2 class="text-capitalize">Please enter your expense</h2>
                 <div class="form-group">
-                    <input type="text" class="expense-input" id="expense-input">
+                    <input type="text" class="form-control expense-input" id="expense-input">
                 </div>
-                <h2>Please enter expense amount</h2>
+                <h2 class="text-capitalize">Please enter expense amount</h2>
                 <div class="form-group">
-                    <input type="number" class="expense-input" id="amount-input">
+                    <input type="number" class="form-control expense-input" id="amount-input">
                 </div>
-                <button type="submit" id="expense-submit">Add expense</button>
+                <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">Add expense</button>
             </form>
         </div>
         <div class="expense-list" id="expense-list">
