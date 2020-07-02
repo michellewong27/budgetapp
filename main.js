@@ -113,9 +113,16 @@ class UI {
         this.expenseAmount.textContent = total;
         return total;
     }
-    editExpense(element){
 
+    editExpense(element){
+        let id = parseInt(element.dataset.id)
+        //Traverse up DOM to find entire expense element
+        let parent = element.parentElement.parentElement.parentElement
+        this.expenseList.removeChild(parent);
+        //Removed from DOM ^, now have to remove from array we created line 15
+        
     }
+
     deleteExpense(element){
 
     }
@@ -149,8 +156,6 @@ function eventListeners(){
     })
 
 }
-
-
 
 
 document.addEventListener('DOMContentLoaded', function(){
