@@ -91,10 +91,10 @@ class UI {
         <h5 class="expense-amount mb-0 list-item">${expense.amount}</h5>
         <div class="expense-icons list-item">
          <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
-          <i class="fas fa-edit"></i>
+          <button class="edit">Edit</button>
          </a>
          <a href="#" class="delete-icon" data-id="${expense.id}">
-          <i class="fas fa-trash"></i>
+         <button class="delete">Delete</button>
          </a>
         </div>
        </div>
@@ -135,8 +135,8 @@ function eventListeners(){
         ui.submitExpenseForm();
     })
 
-    expenseList.addEventListener('click', function(){
-
+    expenseList.addEventListener('click', function(event){
+        event.target
     })
 
 }
