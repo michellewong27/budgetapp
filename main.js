@@ -113,8 +113,12 @@ class UI {
         this.expenseAmount.textContent = total;
         return total;
     }
+    editExpense(element){
 
+    }
+    deleteExpense(element){
 
+    }
 }
 
 function eventListeners(){
@@ -138,9 +142,9 @@ function eventListeners(){
     expenseList.addEventListener('click', function(event){
         console.log(event.target)
         if(event.target.parentElement.classList.contains('edit')){
-
+            ui.editExpense(event.target.parentElement)
         } else if (event.target.parentElement.classList.contains('delete')){
-            
+            ui.deleteExpense(event.target.parentElement)
         }
     })
 
