@@ -136,7 +136,12 @@ function eventListeners(){
     })
 
     expenseList.addEventListener('click', function(event){
-        event.target
+        console.log(event.target)
+        if(event.target.parentElement.classList.contains('edit')){
+
+        } else if (event.target.parentElement.classList.contains('delete')){
+            
+        }
     })
 
 }
