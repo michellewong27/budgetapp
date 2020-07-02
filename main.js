@@ -120,6 +120,13 @@ class UI {
         let parent = element.parentElement.parentElement.parentElement
         this.expenseList.removeChild(parent);
         //Removed from DOM ^, now have to remove from array we created line 15
+            //Grab item with the ID we recieved
+            //filter returns new array
+        let expense = this.itemList.filter(function(item){
+            //iterating through whole array
+            //if item im going through's id matches what I'm getting back, then return it & make it the expense var
+            return item.id === id
+        })
         
     }
 
