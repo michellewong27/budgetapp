@@ -46,34 +46,36 @@ h1 {
     padding: 20px;
 }
 
-
 .budget-form {
     float: left;
     height: 150px;
-    width:50%;
+    width:40%;
+    margin-left: 20px;
+    margin-bottom: 40px;
 }
-
 
 .expense-form{
     width: 50%;
     height: 150px;
     float: right;
+    margin-bottom: 40px;
 
 }
 
 #expense-title{
     padding-top: 100px;
     float: left;
-    width: 50%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-#expense-value{
-    padding-top: 100px;
-    float: left;
-    width: 50%;
+.expense {
+    float:left;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 100%;
 }
-
-
 
 .topnav {
     background-color: black;
