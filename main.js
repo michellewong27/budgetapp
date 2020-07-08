@@ -67,8 +67,8 @@ class UI {
             }, 4000)
         } else {
             let amount = parseInt(amountValue);
-            this.expenseInput.value = " ";
-            this.amountInput.value = " ";
+            this.expenseInput.value = '';
+            this.amountInput.value = '';
 
             let expense = {
                 id: this.itemID,
@@ -118,20 +118,43 @@ class UI {
         let id = parseInt(element.dataset.id)
         //Traverse up DOM to find entire expense element
         let parent = element.parentElement.parentElement.parentElement
+        //Remove from DOM
         this.expenseList.removeChild(parent);
-        //Removed from DOM ^, now have to remove from array we created line 15
+        //Remove from array, created line 15
             //Grab item with the ID we recieved
             //filter returns new array
+        //Expense variable is an array that holds 1 element
         let expense = this.itemList.filter(function(item){
             //iterating through whole array
             //if item im going through's id matches what I'm getting back, then return it & make it the expense var
             return item.id === id
         })
-        
+        //show value in expense input form to edit
+        this.expenseInput.value = expense[0].title;
+        this.amountInput.value = expense[0].amount;
+        //Remove from list
+        let tempList = this.itemList.filter(function(item){
+            //return items that don't have that id
+            return item.id !== id
+        })
+        //reassign itemList to updated list without id
+        this.itemList = tempList;
+        //everytime we update, we want to show the new balance
+        this.showBalance();
     }
 
     deleteExpense(element){
-
+        let id = parseInt(element.dataset.id)
+        //Traverse up DOM to find entire expense element
+        let parent = element.parentElement.parentElement.parentElement
+        //Remove from DOM
+        this.expenseList.removeChild(parent);
+        //Remove from the list
+        let tempList = this.itemList.filter(function(item){
+            return item.id !== id
+        })
+        this.itemList = tempList;
+        this.showBalance();
     }
 }
 
@@ -154,10 +177,10 @@ function eventListeners(){
     })
 
     expenseList.addEventListener('click', function(event){
-        console.log(event.target)
-        if(event.target.parentElement.classList.contains('edit')){
+        //if the parent element has a class that contains 'edit icon'
+        if(event.target.parentElement.classList.contains('edit-icon')){
             ui.editExpense(event.target.parentElement)
-        } else if (event.target.parentElement.classList.contains('delete')){
+        } else if (event.target.parentElement.classList.contains('delete-icon')){
             ui.deleteExpense(event.target.parentElement)
         }
     })
