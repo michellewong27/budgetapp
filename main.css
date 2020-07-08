@@ -16,21 +16,19 @@
     height: 200px;
     float: left;
     padding-left: 10%;
+    margin: auto;
+    background-color: black;
+    color: white;
 }
 .user-budget {
     float: left;
     width: 20%;
-    background-color: black;
-    color: white;
     text-align: center;
-    border: yellow;
     padding: 20px;
 }
 .user-balance {
     float: left;
     width: 20%;
-    background-color: black;
-    color: white;
     text-align: center;
     padding: 20px;
 }
@@ -38,24 +36,23 @@
 .user-expense {
     float: left;
     width: 20%;
-    background-color: black;
-    color: white;
     text-align: center;
     padding: 20px;
 }
 
 .expense-form{
-
+    padding-top: 250px;
     width: fit-content;
 }
 
-
 #expense-title{
+    padding-top: 50px;
     float: left;
     width: 50%;
 }
 
 #expense-value{
+    padding-top: 50px;
     float: left;
     width: 50%;
 }
