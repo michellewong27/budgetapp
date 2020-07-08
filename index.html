@@ -7,17 +7,10 @@
     <title>Budget Me</title>
     </head>
     <body>
-        <div class="container">
-            <h1>Budget Me</h1>
-            <div class="budget-feedback alert alert-danger text-capitalize">Budget Feedback</div>
-            <form id="budget-form" class="budget-form">
-                <h2>Enter your budget</h2>
-                <div class="form-group">
-                    <input type="number" class="budget-input" id="budget-input">
-                </div>
-                <button type="submit" id="budget-submit">Calculate</button>
-            </form>
+        <div class='topnav'>
+            <a href='index.html'>Home</a>
         </div>
+        <h1>Budget Me</h1>
         <div class="balance-container">
             <div class="user-budget">
                 <h2>Budget</h2>
@@ -35,8 +28,18 @@
                 <h2 class="text-uppercase mt-2 balance" id="balance"><span>$ </span><span id="balance-amount">0</span></h2>
             </div>
         </div>
-        
-        <br>
+
+        <div class="container">
+            <div class="budget-feedback alert alert-danger text-capitalize">Budget Feedback</div>
+            <form id="budget-form" class="budget-form">
+                <h2>Enter your budget</h2>
+                <div class="form-group">
+                    <input type="number" class="budget-input" id="budget-input">
+                </div>
+                <button type="submit" id="budget-submit">Calculate</button>
+            </form>
+        </div>
+
         <div class="expense-input-fields">
             <div class="expense-feedback alert alert-danger text-capitalize">Expense Feedback</div>
             <form id="expense-form" class="expense-form">
@@ -51,6 +54,7 @@
                 <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">Add expense</button>
             </form>
         </div>
+
         <div class="expense-list" id="expense-list">
             <h2 class="list-item" id="expense-title">Expense Title</h2>
             <h2 class="list-item" id="expense-value">Expense Value</h2>
