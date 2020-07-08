@@ -3,9 +3,18 @@
     display: none;
 }
 
+/* body {
+    background-image: url("https://media.wired.com/photos/5d3b330bd18f7c00094ecccc/125:94/w_2392,h_1799,c_limit/security_cash_83077314.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+} */
+
 /* added & shows budget feedback when input is entered */
 .showItem {
     display: block;
+
 }
 
 /* Title */
@@ -22,7 +31,7 @@ h1 {
     height: 200px;
     float: left;
     padding-left: 10%;
-    margin: auto;
+    margin-bottom: 20px;
     background-color: black;
     color: white;
 }
@@ -47,23 +56,26 @@ h1 {
 }
 
 .budget-form {
+    border-style: solid;
     float: left;
     height: 150px;
-    width:40%;
-    margin-left: 20px;
-    margin-bottom: 40px;
+    width: 28%;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
 .expense-form{
+    border-style: solid;
     width: 50%;
     height: 150px;
     float: right;
-    margin-bottom: 40px;
-
+    margin-top: 20px;
+    padding-bottom: 90px;
+    padding-left: 20px;
 }
 
 #expense-title{
-    padding-top: 100px;
+    padding-top: 10px;
     float: left;
     margin-left: 20px;
     margin-bottom: 20px;

@@ -23,7 +23,7 @@ class UI {
             //add class list to show message
             this.budgetFeedback.classList.add('showItem');
             this.budgetFeedback.innerHTML = `
-            <p>Value cannot be empty or negative</p>
+            <p style="color:red">Value cannot be empty or negative</p>
             `;
             //grabbing value of this thats pointing back to the class
             const self = this;
@@ -53,15 +53,15 @@ class UI {
     }
 
     submitExpenseForm(){
-        console.log("in submit")
         const expenseValue = this.expenseInput.value;
         const amountValue = this.amountInput.value;
 
         if(expenseValue === '' || amountValue === '' || amountValue < 0){
             this.expenseFeedback.classList.add('showItem');
             this.expenseFeedback.innerHTML = `
-            <p>Values cannot be empty or negative</p>
+            <p style="color:red; margin-left:60%">Values cannot be empty or negative</p>
             `;
+
             const self = this;
             setTimeout(function(){
                 self.expenseFeedback.classList.remove('showItem');
