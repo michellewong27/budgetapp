@@ -7,3 +7,55 @@
 .showItem {
     display: block;
 }
+
+.budget-form{
+    height: 150px;
+}
+.balance-container{
+    width: 100%;
+    height: 200px;
+    float: left;
+    padding-left: 10%;
+}
+.user-budget {
+    float: left;
+    width: 20%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: yellow;
+    padding: 20px;
+}
+.user-balance {
+    float: left;
+    width: 20%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.user-expense {
+    float: left;
+    width: 20%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.expense-form{
+
+    width: fit-content;
+}
+
+
+#expense-title{
+    float: left;
+    width: 50%;
+}
+
+#expense-value{
+    float: left;
+    width: 50%;
+}
